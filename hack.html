@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Lifecycle</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    /* Header */
+    .header {
+      background-color: #ff6600;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 5px;
+      margin-bottom: 25px;
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Common box styles */
+    .box {
+      padding: 15px;
+      margin: 15px auto;
+      width: 150px;
+      border-radius: 5px;
+      color: black;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Stage-specific colors */
+    .plan { background-color: #dbe9ff; }       /* Light Blue */
+    .develop { background-color: #ffe0b3; }    /* Light Orange */
+    .build { background-color: #e6d9e8; }      /* Light Purple */
+    .release { background-color: #d7ecd9; }    /* Light Green */
+    .operate { background-color: #556b2f; color: white; } /* Dark Green */
+    .monitor { background-color: #ff9900; color: black; } /* Orange */
+
+    /* Test - Diamond Shape */
+    .test {
+      background-color: #f8c8c8; /* Light Red */
+      width: 100px;
+      height: 100px;
+      margin: 30px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transform: rotate(45deg); /* Make diamond shape */
+    }
+
+    .test span {
+      transform: rotate(-45deg); /* Rotate text back */
+      display: block;
+      font-weight: bold;
+    }
+
+    /* Deploy - Cloud Shape */
+    .deploy {
+      background-color: #e3f0ff;
+      width: 140px;
+      height: 70px;
+      position: relative;
+      margin: 20px auto;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .deploy::before,
+    .deploy::after {
+      content: '';
+      position: absolute;
+      background-color: #e3f0ff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      top: -20px;
+    }
+
+    .deploy::before {
+      left: 10px;
+    }
+
+    .deploy::after {
+      right: 10px;
+    }
+
+    /* Arrow styles */
+    .arrow {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 25px solid black;
+      margin: 15px auto;
+    }
+
+    /* Hover Effect */
+    .box:hover, .test:hover, .deploy:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">DevOps Lifecycle</div>
+
+    <!-- Stages -->
+    <div class="box plan">Plan</div>
+    <div class="arrow"></div>
+
+    <div class="box develop">Develop</div>
+    <div class="arrow"></div>
+
+    <div class="box build">Build</div>
+    <div class="arrow"></div>
+
+    <div class="test"><span>Test</span></div>
+    <div class="arrow"></div>
+
+    <div class="box release">Release</div>
+    <div class="arrow"></div>
+
+    <div class="deploy">Deploy</div>
+    <div class="arrow"></div>
+
+    <div class="box operate">Operate</div>
+    <div class="arrow"></div>
+
+    <div class="box monitor">Monitor</div>
+  </div>
+</body>
+</html>
